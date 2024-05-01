@@ -3,12 +3,12 @@ name = "worst-counter"
 main = "src/index.ts"
 compatibility_date = "2024-04-23"
 compatibility_flags = ["nodejs_compat"]
-services = [{ binding = "SELF", service = "worst-counter" }]
+#services = [{ binding = "SELF", service = "worst-counter" }]
 
-[triggers]
-crons = ["* * * * *"]
+#[triggers]
+#crons = ["* * * * *"]
 
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "worst-counter"
-database_id = "ec5130e5-593c-481d-b2fb-2e199d030850"
+database_id = "2f73e58b-2da5-4869-beee-fb39a47c08d9"

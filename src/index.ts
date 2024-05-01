@@ -27,11 +27,11 @@ export default {
 			});
 		}
 	},
-	scheduled: async (
-		_event: any,
-		env: Env,
-		_ctx: ExecutionContext
-	): Promise<void> => {
-		await env.SELF.fetch('https://self/inc');
-	},
+	// scheduled: async (
+	// 	_event: any,
+	// 	env: Env,
+	// 	_ctx: ExecutionContext
+	// ): Promise<void> => {
+	// 	await env.SELF.fetch('https://self/inc');
+	// },
 };
