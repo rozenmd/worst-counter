@@ -1,5 +1,3 @@
-type QueryResponse = { success: boolean; meta: any; results: any[] };
-
 export default {
 	async fetch(
 		request: Request,
@@ -18,9 +16,9 @@ export default {
 			).run();
 			return new Response('OK');
 		} else {
-			const queryResp = (await env.DB.prepare(
+			const queryResp = await env.DB.prepare(
 				'SELECT * FROM counter WHERE id=1'
-			).all()) as QueryResponse;
+			).all();
 
 			return new Response(JSON.stringify(queryResp.results[0], null, 2), {
 				headers: { 'content-type': 'application/json' },
